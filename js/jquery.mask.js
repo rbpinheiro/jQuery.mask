@@ -48,19 +48,8 @@
         },
         bindEvents: function() {
             var self = this;
-            /*
-            this.element.bind('keydown', function(e) {
-                console.log($('#cep'));
-                $('#cep').trigger(e);
-                var position = self.getCaretPosition();
-                if (position === self.element.val().length) {
-                    self.caretPosition = 'end';
-                } else {
-                    self.caretPosition = position;
-                }
-            });
-            */
-            this.element.bind('keyup', function() {
+            
+            this.element.bind('keydown keyup', function() {
                 self.applyMask();
             });
         },
@@ -129,6 +118,7 @@
                 }
                 
                 this.setCaretPostion(caretPosition);
+                
             }
         },
         getCaretPosition: function () {/*todo: test crossbrowser*/
