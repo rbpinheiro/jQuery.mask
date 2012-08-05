@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>jQuery mask plugin</title>
+	<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.mask.js"></script>
+	<style>
+		body, html {width:100%; height:100%; margin:0; padding:0; font-size:1.1em;}
+		form {width:20%; padding:50px;}
+		input, label {width:100%; display:block; margin-bottom:10px; height:20px;}
+	</style>
+</head>
+<body>
+	<form action="#" method="get" accept-charset="utf-8">
+		<label for="phone">Phone</label><input type="text" name="phone" value="" id="phone">
+		<label for="cep">Cep</label><input type="text" name="cep" value="" id="cep">
+		<label for="cpf">CPF</label><input type="text" name="cpf" value="" id="cpf">
+	</form>
+	<script type="text/javascript" charset="utf-8">
+		$('#phone').mask('(99) 9999-9999');
+		$('#cep').mask('99999-999');
+		$('#cpf').mask('999.999.999-99');
+	</script>
+</body>
+</html>
